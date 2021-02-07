@@ -5,5 +5,13 @@
  * @returns {object} - returns the new object
  */
 export const pick = (obj, ...fields) => {
+	const result = {};
 
+	fields.forEach(el=>{
+		if(obj[el]){
+			result[el] = obj[el];
+		}
+	})
+
+	return result;
 };
